@@ -1,0 +1,48 @@
+
+05 Oct 2015
+Meeting with Marcus - 2:30 - 3:05
+
+Discussed various aspects of the project, the overall goals and the initial steps.
+
+CERN VISIT
+- There is a visit from CERN on 3rd Nov. Members of Open Lab will be visiting.
+- To prepare for this, I should:
+  - Look at existing workflows for storing neuroscience data (fMRI etc.). PACS is one such system (a DB which stores neuroscience recordings etc). Mike knows about these systems.
+  - Look at the OS that is best to handle the DB (generally the specification of the system needed to handle the neuroscience data). There is a 'new' debian solution which comes packaged with neuroscience tools (but it is poorly supported, only by two people). Decide on a UNIX system to use for the VM.
+  - Likely to use a VM to run the OS, which handles the DB. The VM will interface to a cluster, and receive data which is fedback.
+
+DB:
+My understanding is that the OS will hold the DB, which contains the experimental neuroscience data, as well as the output from VERTEX. It is within this environment that a comparison can take place between the two data-sets. Look at PACS, or possibly some MSSQL implementation. There is a question about whether PACS can deal with timeseries of data. The DB will need to support this. I will look at the Human Connectome Project to influence this decision. They already have systems in place to handle this.
+
+More on that comparison:
+- I was provided a masters thesis paper by Stuart Maitland on Simulated Annealing of Cortical networks. This can be used to construct networks which get close to real data.
+
+PSOM (the workflow bit):
+Mentioned PyNE and NEST for simulating the neurones.
+
+Mentioned a need for identifying an ontology to use:
+- There are many ways that the brain can be divided up. Look into the types of ontologies available.
+- INCF.org has information on this:
+  - What software/documentation is available?
+  - Marcus provided me with booklets on this. 
+
+Mentioned a need for some UML tool:
+- Look at UML/BrainML for describing data formats?
+- Related to ontologies?
+
+A note about how the biological data is handled:
+Graphs are constructed from algorithms which look at JPEG images of the brain (MRI). CIFTI and NIFTI are data formats from the MRI images.
+
+A note about the lectures:
+- Marcus recommeneded that I attend a Systems Neuroscience lecture as part of the Medical school.
+- Also mentioned that I should attend a series of lectures in Feb - 3 weeks - complex systems.
+- Week 5 + 6, Brain connectivity.
+
+Outcomes:
+- Priority on preparing for CERN visit on 3rd Nov.
+- Investigate a PACS/MSSQL solution for storing(!) neurscience data (talk to Mike - what systems are available). ***How to run this on a VM? What specs are needed?***
+- Investigate PSOM - there is a paper which Marcus has sent. Look at PyNE, NEST, BrainX3 (Barcelona) for simulating neurones.
+- Investigate MSA (Multiple Shapely Analysis) - Marcus uses this in his PhD thesis [2005, page 111] (likely linked to his Google Scholar page). Also go to the website which is listed on the initial proposal document.
+- VERTEX - Chris Thornton knows about working with VERTEX.
+- Ontologies to use which describe how to divide the brain up. INCF.org.
+- UML - BrainML.
